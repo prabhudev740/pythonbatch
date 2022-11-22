@@ -853,3 +853,103 @@ it will takwe 2 collection with same lengh or it will slice to it to smallest le
 it will return collection tuples
 
 zip(collection1, collection2)
+
+
+
+Fuction 
+--------
+function is a block reusable code, it is only runs when it is called.
+
+it will take some arguments and return some value , this is optional.
+
+What are the types of functions in python?
+    1) inbuilt function
+    2) user defined function
+
+
+1) inbuilt function
+-------------------------
+these are the prewritten functions by developers to perform some specific tasks.
+
+Ex : len()
+    sum()
+    print()
+    min()
+    max(), etc
+
+2) user defined function
+-------------------------
+These are the customized function, written by user to perform specific task as per requirement
+to define a user defined function we  use "def" keyword.
+to execute this function we need to call it
+
+to call a function we have use function name with parenthesis
+Ex : function_name()
+
+we cant call a function before execution.
+The function always return to the function from where it is called
+
+components of functions
+------------------------
+def keyword
+function name
+arguments within parenthesis, separated by comma
+statements
+return statement
+function call
+
+def func_name(args):
+    statement 1
+    statement 2
+    statement 3
+
+    return statement
+
+
+Ex : 
+def add(n1, n2):
+    res = n1 + n2
+    return res
+
+add(1, 2)
+
+
+Background process
+----------------------
+Our all codes are executing inside main space.
+But the statements in functions are stored/written in function Area
+
+when our controller see the def keyword, it will create a block in FA
+it will store the arguments 
+it will store all the statement in that function block
+it will assign some address to that block
+noe in main space function will refer to that address
+
+Note: Functions always return None bydefault
+
+
+user defined functions are of 4 types
+----------------------------------------
+1) without args and without return value
+2) with args and without return
+3) without args and with return 
+4) with args and with return value
+
+
+1) without args and without return values
+-----------------------------------------
+Here this function is not taking any arguments and it will not return anything
+
+Syntax :
+def func_name():
+    statement 1
+    statement 2
+    statement 3
+
+func_name()
+
+Ex : 
+def display():
+    print('message)
+
+display()
