@@ -953,3 +953,87 @@ def display():
     print('message)
 
 display()
+
+2) With args without return val
+--------------------------------------
+This type of function will take one or more arguments
+And it will nothing
+
+Syntax: 
+def func_name(arg 1, arg2,....arg n):
+    statement 1
+    statement 2
+    statement 3
+
+func(arg 1, arg2, ...arg n)
+
+Ex :
+def print_name(name):
+    print(name)
+
+print_name("MSys")
+
+This is called setter function.
+
+
+return statement
+------------------
+it is used to return the flow of code from function to main space
+it is not mandatoy to use return keyword
+return keyword will return some value we mentioned, 
+if nothing is mentioned with return keyword it will by default return 'None'
+whatever the value that function will return we have to store it in some variable
+
+Note: if we return only one value it will return the same
+    if we return multiple values it return as a tuple
+
+Synatx 
+def func():
+    return val1, vale2, ...val n
+
+
+3) without args and with return 
+-------------------------------------
+These functions will not take any argument, but return some values
+
+these are also known as getter functions
+
+Syntax:
+def func_name():
+    statement 1
+    statement 2
+    return val1, val2, ...val n1
+
+res = func_name()
+
+Ex:
+def pi():
+    return 3.14
+
+v = pi()
+
+
+4) with args and with return value
+---------------------------------------
+it will take some args and return some value
+
+Syntax:
+def func(arg 1, arg 2, ... arg n):
+    statement 1
+    statement 2
+    statement 3
+    return val1, val2, ...
+
+Ex:
+def even(n):
+    arr = []
+
+    for i in range(n):
+        if i % 2 == 0:
+            arr.append(i)
+
+    return arr
+
+n = int(input())
+res = even(n)
+print(res)
