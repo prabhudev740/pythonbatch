@@ -914,6 +914,23 @@ def add(n1, n2):
 add(1, 2)
 
 
+Functions are divided in 2 parts
+----------------------------------
+1) Main space
+2) Function Area/ mathod Area
+
+1) main space
+    ----------
+    It is the mem block which will execute all the instuction stored in it, when the
+    program executed.
+
+2) Method Area
+    -----------
+    It is a memory space which will store some named block of instruction
+
+    the block of code in method area will be executed when we call the function.
+
+
 Background process
 ----------------------
 Our all codes are executing inside main space.
@@ -1037,3 +1054,134 @@ def even(n):
 n = int(input())
 res = even(n)
 print(res)
+
+
+
+arguments are of 2 types
+-----------------------
+
+1) Actual arguments
+2) Formal Arguments
+
+
+1) Actual arguments
+    The arguments which are passed with function call 
+
+    Ex : func_name(10, 20)  --> 10, 20 are Actual Arguments
+
+2) Formal Arguments
+    These are the arguments which are recived in func definition
+
+    Ex :
+    def func_name(n1, n2):      --> n1, n2 are Formal Arguments
+        pass
+
+
+Varibales in Functions
+-------------------------
+1) global Varibales
+2) local Varibales
+3) nonlocal variable
+
+
+1) global
+----------
+    Thses are the varibles present in main space.
+    These can be accessed and used in both main space and method area.
+    These can be  modified in main space.
+    But if we want to modify it in method are we have use global keyword with varible name.
+    golbal keyword will fetch the adress of that varible which is written after global keyword
+    only those global varibles can be modified, which we have given access in method area.
+
+    Ex:
+    x = 10
+
+    def func():
+        print(x)
+
+    func()
+
+
+    Ex2:
+    y = 11
+
+    def adder():
+        global y
+        y = y + 1
+
+    print(y)
+    adder()
+    print(y)
+
+
+
+local variable
+---------------
+    The varibles which are present inside method area are called local varible
+    We can oly access and modify l.v. in method area.
+    We can cant access l.v. in Main space.
+
+    Arguments are local varibles
+
+    ex:
+    def func():
+        a = 10
+        print(a)
+
+    a = 50
+    print(a)
+    func()
+    print(a)
+
+
+nonlocal Varibales
+---------------------
+    Local varibale of outer functon, is called nonlocal varible for inner functio
+
+    if we want we can acces and use the l.v. of outer function inside inner function
+    but it we want to modify it, we nonlocal keyword
+
+    nonlocal will give access to modify the l.v. of outer func to inner func.
+
+    ex:
+    def outer():
+        x = 10
+        def inner():
+            y = 30
+            print(x)
+            print(y)
+            print(z)
+
+        inner()
+    
+    z = 100
+    outer()
+
+
+Passing Default arguments to Functions
+-------------------------------
+    --> The number of actual and formal args should be equal.
+    --> If we don't pass same no. of args, we will get error
+    --> To overcome this problem, we can use default values in function definition.
+
+
+    There will be two types of args in function.
+    -----------
+    1) mandatoy or default args
+    2) optional or non-default args
+
+    1) mandatoy or default args
+    ------------------------------
+    -> these are the arguments, which we have to pass defaultly.
+    -> if we don't pass them we will get error
+    -> in function call we have to pass equal no of default args.
+
+    2) optional or non-default args
+    ----------------------------------
+    these are the arguments with value which can be passed in function definition.
+    in function call we can pass them if required and also we can skip them.
+    if we don't pass the value in function call, it will take the default value.
+
+
+    Note: if we are writting both mandatoy and optional arguments in one function,
+        first we have write the mandatoy args, followed by optional args.
