@@ -1185,3 +1185,45 @@ Passing Default arguments to Functions
 
     Note: if we are writting both mandatoy and optional arguments in one function,
         first we have write the mandatoy args, followed by optional args.
+
+Packing
+---------
+Most of the functions the no of actual and formal args are different. in we will get error
+
+To handle this problem we can use packed values in tuple
+Sending the n no. of values from function call to func definiion and store them in tuple 
+is called packing
+
+packing is done in tuple because of positional purpose.
+
+There are two types of packing
+-----------------------------
+1) *args
+2) **kwargs
+
+1) *args
+---------
+in this type of packing the postional/mandatoy/default 
+    args will be passed to func definiion in Tuple
+
+Here we can pass 0 to n no. values
+
+
+Syntax:
+def func(*args):
+    print(args)
+
+func(v1, v2, v3,... vn)
+
+2) **kwargs
+-----------------
+it will pack kwargs/ optional/mom-default in function definition
+it will pack 0 to n no. of args.
+it will only pack kw agrs, not postional args
+the packing of kw args will be done in dict.
+
+Syntax:
+def func(**kwargs):
+    print(kwargs)
+
+func(kw1=val1, kw2=val2, ....., kw n = val n)
