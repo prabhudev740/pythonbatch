@@ -1227,3 +1227,118 @@ def func(**kwargs):
     print(kwargs)
 
 func(kw1=val1, kw2=val2, ....., kw n = val n)
+
+
+Recursion
+----------------
+When a function calls itself is called Recursion.
+
+Parts of Recursion
+------------------
+function definition ---> to define the function
+base case           --> it is used to terminate the Recursion
+statements          --> these are the statement which will be executed.
+recursive case      --> this is the function call
+
+
+Synatx: 
+def func_name(arg1, arg2, ...arg n):
+    base case
+    statemnts --> optional
+    recursive case
+
+
+Based on postion of recursive case
+These are of 4 types
+----------------------
+1) Head Recursion
+2) Tail Recursion
+3) Tree Recursion
+4) Indirect Recursion
+
+1) Head
+---------------
+All the statement will be after recursive case
+
+Syntax:
+def func_name():
+    basecase
+    recursive case
+    statement
+
+Ex:
+def display(n1, n2):
+    if n1 <= n2:
+        display(n1+1, n2)
+        print(n1)
+
+display(1, 5)
+
+2) Tail Recursion
+--------------------
+recursive case will present after statements
+
+Syntax:
+def func_name():
+    basecase
+    statement
+    recursive case
+
+
+Ex:
+def display(n1, n2):
+    if n1 <= n2:
+        print(n1)
+        display(n1+1, n2)
+
+display(1, 5)
+
+
+3) Tree Recursion
+------------------
+in a function whwn the function calls itself more than 1 times, 
+it is called Tree Recursion
+
+Syntax:
+def func_name():
+    basecase
+    recursive case
+    statement
+    recursive case
+
+Ex:
+def display(n1, n2):
+    if n1 <= n2:
+        display(n1+1, n2)
+        print(n1)
+        display(n1+1, n2)
+
+display(1, 3)
+
+4) Indirect Recursion
+------------------------
+when two or more functions call each other recursively
+
+Syntax:
+def func_name1():
+    basecase
+    statement
+    func_name2()
+
+def func_name2():
+    basecase
+    statement
+    func_name1()
+
+Ex:
+def display1(n1, n2):
+    if n1 <= n2:
+        print(n1)
+        display2(n1+1, n2)
+
+def display2(n1, n2):
+    if n1 <= n2:
+        print(n1)
+        display1(n1+1, n2)
+
+display(1, 3)
