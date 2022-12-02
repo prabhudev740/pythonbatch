@@ -1,0 +1,56 @@
+var = 10 ---> properties / data/ states
+functions ---> functionalities / method /behaviour
+
+I am MSysian.
+className       --> camel case
+ClassName       --> pascal case
+var_name
+func_name
+
+Object Oriented Programming
+------------------------------
+Opps is a structure where we can bunddle some set of similar properties and methods
+-> To write reusable codes using classes and objects is called OOP.
+
+class
+-----
+This is a user defined datatype, which specifies the properties and functionalities to be storesd.
+Here we are specifing the base/ intial data/ properties and functionalities to  storesd
+we define a class using 'class' keywod.
+
+Syntax:
+class ClassName:
+    data / properties / states
+    functionalities / methods/ behaviours
+
+
+inside a class first we have write all the properties, then only we can define our menthod
+
+
+Ex:
+class Car:
+    color = 'red'
+    wheels = 4
+
+    def start(self):
+        print('started')
+
+    def stop(self):
+        print('stopped')
+
+
+Object
+------
+Object is a real world entity consists of some data and menthods
+-> It is an instance of a class, it will have all the properties and functionalities of that class
+
+we can intialize object by calling the class name.
+
+Syntax:
+object_name = ClassName()
+
+when ever we intialize an object, will copy all the properties and methods from class.
+
+
+Ex:
+nano = Car()
