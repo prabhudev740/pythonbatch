@@ -54,3 +54,58 @@ when ever we intialize an object, will copy all the properties and methods from 
 
 Ex:
 nano = Car()
+
+
+Memory management of class
+------------------
+Whenever our controller sees that class keyword, it will create a dict block with key and val.
+it will store all the properties, key will store the variable name and val will store tha val of that data
+for functionalities, it will go to method area and create a methof block and
+address oft that block will be stored in val part of that function name.
+some address wil be assigned to that dict block.
+the class name will point to that adress.
+
+
+Memory management of objects
+-------------------------------
+When our controller get a new object,
+it will create one dict block again
+it will copy all the properties and func_name to key part
+for value it will get address and store it.
+some address will given to that block
+object will pont to that addres
+
+
+There is two parts in oops
+---------------------------
+properties / data / states
+    i) Generic data / class data
+    ii) Specific data / object data
+
+menthods / behaviours / functionalities
+    i) object method
+    ii) class method
+    ii) static method
+
+
+Generic data
+---------------
+Generic data is also known as class data.
+
+the data which are common in both class and object is called Generic data
+the data is written in class block.
+
+The Generic data will be stored inside the class dict block, and refernece ot the data will be stored in object dict block
+
+To access the Generic data we can take help of class name and objec name with dot (.) operator
+
+    --> ClassName.propertie_name
+    --> obj_name. propertie_name
+
+if we want to modify value for class
+    --> ClassName.propertie_name = new-val
+
+if we want to modify data for object
+    --> obj_name.propertie_name = new_val
+
+Note -if we change the val for object, it will not point to the class data, it will become a Specific data
