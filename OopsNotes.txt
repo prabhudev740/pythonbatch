@@ -109,3 +109,61 @@ if we want to modify data for object
     --> obj_name.propertie_name = new_val
 
 Note -if we change the val for object, it will not point to the class data, it will become a Specific data
+
+
+Specific / object data
+-----------------------
+The data which is only specific to the object is known specific or object data
+
+Specific data is created in object dict block
+
+object data are specific to that perticular object only
+
+To create a bject data, we user
+    Syntax:
+    obj_name.new_property = new_val
+
+    Ex:
+    tesla.ads = True
+
+
+Constructor on initalization
+-------------
+Constructor is a method which is used to create specific data for all the objects
+
+Constructor is special method in python whose name is predefined.
+
+    i.e. __init__()
+
+it will take one defalut arg, ie. "self"
+
+"self" is an arg., it will store the adress of that object from where it is called
+Constructor / __init__ method will be called automatically when we create one object.
+
+Constructor method should be written in class after writing all the feneric data.
+
+To give that specific data we have to give args in parenthesis, while creating object
+
+Syntax:
+    def __init__(self, arg1, arg2, ..., argn):
+        self.obj_data1 = new_val1
+        self.obj_data2 = new_val2
+        self.obj_data3 = new_val3
+
+
+obj_name = ClassName(arg1, arg2, arg3...)
+Ex:
+class Car:
+    wheels = 4
+
+    def __init__(self, c):
+        self.color = c
+
+    def start(self):
+        print("started")
+
+    def stop(self):
+        print('stopped')
+
+nano = Car("red")
+tesla = Car("Green")
