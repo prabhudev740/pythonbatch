@@ -144,6 +144,8 @@ Constructor method should be written in class after writing all the feneric data
 
 To give that specific data we have to give args in parenthesis, while creating object
 
+Constructor is one of object method.
+
 Syntax:
     def __init__(self, arg1, arg2, ..., argn):
         self.obj_data1 = new_val1
@@ -167,3 +169,39 @@ class Car:
 
 nano = Car("red")
 tesla = Car("Green")
+
+Methods 
+------------
+There are 3 types of method
+
+1) object method
+2) class menthod
+3) static method
+
+1) object method
+---------------
+    object method is a method which will point to the object dict vlock
+
+    object method will have one defalut arg i.e. 'self'
+
+    whatever we doing in object method it will reflect in obj dict block.
+
+    self will store the adress of that object from where it is called
+
+    Syntax:
+    class ClassName:
+        properties
+        Constructor
+
+        def obj_method(self, arg1, arg2, arg3....):
+            statement 1
+            statement 2
+            statement 3
+
+
+    obj_name = ClassName()
+    # calling object name 
+    obj_name.obj_method(arg1, arg2, arg3....)
+
+    # calling using class name
+    ClassName.obj_method(obj_name, arg1, arg2, arg3...)
