@@ -205,3 +205,56 @@ There are 3 types of method
 
     # calling using class name
     ClassName.obj_method(obj_name, arg1, arg2, arg3...)
+
+
+Class method
+---------------
+Class method will point to class dict block
+it will also have one default arg, "cls"
+to define a class method we have to use one bulit in annotation, "@classmethod"
+"@classmethod" will fetch the address of that calss and store in "cls"
+we dont need to create a object to call a classmethod
+Any changes we made to class data it will affect all the object
+
+Synatx:
+    class ClassName:
+        class data
+        Constructor
+
+        @classmethod
+        def func_name(cls, arg1, arg2, arg3, ...):
+            statement1
+            statement2
+            statement3
+
+To call a class method we have to use
+
+    --> obj_name.classmethod()
+    --> className.classmethod()
+
+
+Static method
+-------------
+static method will be stored the class dict block
+but here we dont need to provide any defalut arg, 'self', 'cls'
+it is bound to the class, i.e its not mandatory to  declare object to call static mathod
+to declare static method, there is one inbuilt annotation "@staticmethod"
+"@staticmethod" will tell the compiler, there is no default arg.
+
+we cant access and modify any class or object data
+
+Synatx:
+    class ClassName:
+
+        @staticmethod
+        def func_name(arg1, arg2, ...):
+            statement1
+            statement2
+            statement3
+
+to call staticmethod
+    --> obj_name.staticmethod()
+    --> ClassName.staticmethod()
+
+
+    
