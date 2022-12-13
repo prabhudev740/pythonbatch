@@ -257,4 +257,167 @@ to call staticmethod
     --> ClassName.staticmethod()
 
 
-    
+Inheritance
+-----------------
+Inheriting properties and methods from one class to another class is called Inheritance.
+The class from where we are Inheriting properties and methods is called parent or base class
+The class to which we are Inheriting is called child or derived class.
+
+class Parent:
+    properties
+    methods
+
+
+class Child(Parent):
+    properties  
+    methods
+
+
+Memory management
+-------------------
+parent class
+-----------
+Whenever controller sees the class keyword it will create a dict block in Main space
+it will store all the properties
+for methods it store the statements of methods in F.A., store the method name in key and address in value
+i will assingn some address to that dict block, className will point to that dict block.
+
+Child class
+-------------
+Whenever controller sees the class keyword it will create a dict block in Main space
+if there is something inherited, it will store all the key and refernece to values first.
+After storing all the properties and methods from parent class, then it will store own properties and methods
+in case we are Inheriting from muliple class properties of class written in right side will stored first.
+some address will be assingned to thet dict block, ClassName will point to that address.
+
+
+method or Constructor chaining
+------------------------------
+it is a method to invoke or class method of parent class being inside child.
+By using method chaning we can utilize the method of parent class in child class
+'__init__', object, class, static mehtods can be chained.
+To call parent class method in child class we have to use one method, i.e 'super()'
+
+Synatx:
+    super().method_name(args)
+
+
+
+There are 5 types of Inheritance
+----------------------------------
+1) Single level Inheritance
+2) Multilevel Inheritance
+3) muliple Inheritance
+4) hierarchy Inheritance
+5) Hybrid Inheritance
+
+1) Single level Inheritance
+--------------------------------
+when properties and methods of one parent class will be inherited to chile class, 
+single level Inheritance
+
+    parent class
+         |
+    child child
+
+Ex:
+    class Car:
+        wheels = 4
+
+    class Tesla(Car):
+        color = 'blue'
+        model = 'X'
+
+
+2) Multilevel Inheritance
+----------------------------
+here properties and methods will be inherited from parent to child class
+then, again it properties and methods will be inherited to its child class and so on.
+
+    parent
+       |
+    Child 1
+       |
+    Child 2
+       |
+       |
+    Child n
+
+
+class Vehicle:
+    fuel = 'oil'
+
+class Car(Vehicle):
+    wheels = 4
+
+class XUV(Car):
+    speed = 100
+
+
+3) muliple Inheritance
+-----------------------
+in this type of inheritace we are Inheriting data from 2 or more classes
+
+    parent 1   parent 2   parent 3
+            \     |     /
+                child
+
+Note: The right most class will be inherit first.
+
+Ex:
+    class Animal:
+    legs = 4
+
+    class Tiger:
+        tail = True
+
+    class Cat(Animal, Tiger):
+        color = 'white'
+
+
+4) hierarchy Inheritance
+-------------------------
+in his type inheritace there will be one parent 2 or more child class
+
+                 parent
+            /       |       \
+        child 1   child 2    child n
+
+
+        Ex :
+            class Car:
+                wheels = 4
+
+            class Tesla(Car):
+                color = 'red'
+
+            class Tata(Car):
+                color = 'white'
+
+            tl = Tesla()
+            tt = Tata()
+
+
+5) Hybrid Inheritance  
+-------------------------
+it is a type of inheritace, which has mixture of two or more types of inheritace
+
+            A
+        /       \
+      B(A)      C(A)
+        \       /
+           D(B, C)
+
+
+    Ex:
+        class Car:
+            wheels = 4
+
+        class Tesla(Car):
+            color = 'red'
+
+        class Tata(Car):
+            color = 'white'
+
+        class TataTelsa(Tata, Tesla):
+            ads = 'True'
