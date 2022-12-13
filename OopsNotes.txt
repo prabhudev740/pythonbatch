@@ -408,7 +408,6 @@ it is a type of inheritace, which has mixture of two or more types of inheritace
         \       /
            D(B, C)
 
-
     Ex:
         class Car:
             wheels = 4
@@ -421,3 +420,43 @@ it is a type of inheritace, which has mixture of two or more types of inheritace
 
         class TataTelsa(Tata, Tesla):
             ads = 'True'
+
+
+
+Polymerphism
+-------------
+Perfoming diffrent task, using same function name is called Polymerphism
+
+    poly --> many
+    merphism --> forms
+
+There are 2 types of Polymerphism
+    1) method overloding
+    2) method overriding
+
+1) method overloding
+-----------------------
+executing n no. of methods with same function name and sam eof different no. of args. is called method  overloding.
+
+in python method overloding is not possible.
+if we try to write n  no of function with same function name, last function will override all the previous function.
+
+if we want to use method overloding,  we can use -
+    1) by using default arg.
+    -----------------------
+    here we can pass the defalut args to achive method overloding
+
+    def add(a=0, b=0, c=0, d=0):
+        return a + b + c + d
+
+
+    2) by using packing
+    ---------------------
+    we can use *args & **kwargs
+
+    def add(*vals):
+        res = 0
+
+        for i in vals:
+            res += i
+        return res
