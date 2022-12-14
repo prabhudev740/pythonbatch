@@ -460,3 +460,76 @@ if we want to use method overloding,  we can use -
         for i in vals:
             res += i
         return res
+
+
+2) method overriding
+-----------------------
+When we create 2 or more methods by same name, then previous methods will be override with new
+
+method overriding mostly seen while inheriting data from one class to other class
+to overcome this we can use Constructor or method chaining.
+
+class A:
+    def a(self):
+        print("a in class A")
+
+class B(A):
+    def a(self):
+        super().a()
+        print("a in class B")
+
+
+Access Specifier
+----------------
+To specify the access ability of any variable or data for usage or fethcing perpose or 
+modification purose  we use access specifier.
+
+there are 3 types of access specifier
+    public
+    protected
+    private
+
+
+public
+-----------
+In this kind of access specifier we are giving complete accesibilty
+of varible methods, class name from any where from python file and package
+
+Generally all the varibles and methods we use are public
+
+Syntax:
+    class ClassName:
+        pub_data = val
+        x = 10
+        y = 20
+
+        def test_meth(self):
+            print("public method")
+
+
+protected
+-----------------
+this kind of specifier we are giving access pf varible or method only in cureent package.
+
+Syntax:
+    class ClassName:
+        _var = val
+        _x = 10
+        _y = 10
+
+        def _mthod(self):
+            print("this is protected")
+
+    
+private
+-----------
+in this kind of specifier we are giving accesibilty of variable and methods 
+inside the class
+
+Synatx:
+    class ClassName:
+        __x = 10
+        __y = 20
+
+        def __test(self):
+            print("private")
