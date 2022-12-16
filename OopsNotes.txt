@@ -533,3 +533,156 @@ Synatx:
 
         def __test(self):
             print("private")
+
+
+Exception Handling
+---------------------
+
+Exception :-
+    Exception is an error or obstacle or problem occured in normal flow of execution.
+    Whenever the Exception occures, the execution will stop there only.
+    when the Exception occure, we will create one alternative path of Exception
+    Creating an alternative path is called Exception Handling.
+
+    Except Syntax error we can Handle every type of error.
+    There are 2 blocks in Exception Handling
+        1) try
+        2) except
+
+    1)try
+    ------
+        It is a block of instructions, which may raise Exception or error
+        try is a keyword, it is created where we are expecting Exception Handling
+        All the instructions should be written below try block try block using 1 tab space.
+        For 1 try block we can write n no of except block.
+
+
+        Syntax:
+            try:
+                statement1
+                statement2
+
+                statement n
+
+    2) except
+    ------------
+    it is a block of statements which act like alternative solution,
+    for the Exception occured in 'try' block.
+
+    it is also a keyword created for Exception Handling.
+
+    except block will executed only if we will get error in 'try' block
+
+    Syntax
+    -------
+        try:
+            statements
+        except:
+            statements
+
+
+There are 3 types of Exceptions block
+------------------------------
+    1) specific
+    2) Generic
+    3) default
+
+
+Specific Exception block
+-------------------------
+It is a specific Exception block which will act as a solution to the specific error
+
+here we have mention the name of Exception which may raise.
+
+Here name of Exception is case sensitive.
+
+Syntax:
+
+try:
+    statements
+except <Name of Specific error>:
+    alternative statement
+
+
+Ex:
+
+x = [1, 2, 3, 4]
+
+try:
+    print(x[10])
+except IndexError:
+    print("We will get index error")
+except NameError:
+    print("var is not defined")
+
+
+Generic Exception Block:
+---------------------------
+it will handle all the standard exception which are raised in try block.\
+
+Generic Exception cant handle system related error and hardware related error
+
+in combination of specific and Generic error , we have write the specific errors first then Generic error
+
+Here the  name of Exception will be 'Exception'
+
+try:
+    statements
+except Exception:
+    alternative statement
+
+
+defalut Exception Block
+-------------------------
+This can handle all the standard, sofware, hardware, userdeined erros.
+
+Here we will not mention any exception name.
+
+we have first write all specific, then Generic then only we can write default exception block.
+
+try:
+     statement
+except:
+    solution
+
+finally
+------------
+it is a keyword
+
+this will contain some code block, that will be executed during exception Handling
+
+finally block will excecute compulsory whether the exception raised or not.
+
+try:
+    statement
+except:
+    solution
+finally:
+    message
+
+
+
+raise
+--------
+it is a keyword, which help use to raise standard and custom error
+
+Syntax:
+    raise <name of the error>("message as str")
+
+
+User Defined Exception
+-------------------------
+To define an exception for our own we have an user defined Exception.
+
+To create user defined exception we have to inherit one inbuilt class "Exception" to one or more classes
+
+The new class name will act as Exception or Error
+
+inside this class we cant write any instructions.
+
+we can only pass statement there
+
+Note: The class name should end with "Error", ex: TestError, NumberError
+Syntax:
+class NameOfError(Exception):
+    pass
