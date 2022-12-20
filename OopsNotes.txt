@@ -824,6 +824,30 @@ To place the cursor any given position, we have call seek()
     var.seek(pos)
 
 
+with
+---------
+traditionally we are manually operning and closing. that leads to error sometimes
+
+To overcome this we can use 'with' keyword to open a file.
+
+we only open the file and it gets the closed automatically.
+
+Syntax:
+
+with open("file_path", mode) as alias:
+    statement1
+    statement2
+    statement3
+
+Ex:
+
+with open("file_path", "a") as fp:
+    fp.write(new_data)
+
+
+when our controller sees that with keyword it open the file and store the refernece in file object.
+after completion of excecution of all statements it will close that file automatically.
+
 
 print()
 ---------
@@ -847,3 +871,46 @@ Syntax:
 
     flush -> if the flush is True, it will store the output to the file object instantly.
             defalut value is False
+
+
+
+Iterator
+--------------
+It is a fuction to perform iteration.
+
+when we traverse a sequence to fetch value one by one is called iteration
+
+Two functions are present in Iterator
+
+i) iter()
+ii) next()
+
+i) iter()
+-----------
+this function will intialize cursor at the first element at the sequence
+
+    Syntax:
+
+    variable = iter(args)
+
+Note - This varibale will store the adrees of Iterator
+
+
+ii) next()
+-------------
+it is afunction which traverse through the a sequence by returning one element at a time.
+
+var_name = next(variable)
+
+Note: var_name will store the elements in the sequence
+
+
+lambda function
+----------------
+this are small annonymos function without any name
+we use it when we dont want to call this function more than once
+
+Syntax:
+lambda arg1, arg2, ... : statement
+
+Note: it will directly return the value, we dont need to write the return statement
