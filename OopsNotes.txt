@@ -914,3 +914,23 @@ Syntax:
 lambda arg1, arg2, ... : statement
 
 Note: it will directly return the value, we dont need to write the return statement
+
+
+map(arg1, arg2)
+--------
+it is an inbuilt function
+it will take 2 args
+    --> arg1 : refernece to function
+    --> arg2 : one collection dt / Iterable
+
+it will take one element each time from the collection, it will apply the func in arg1 to each element.
+
+
+filter(arg1, arg2)
+--------------------
+it is an inbuilt function
+it will take 2 args
+    --> arg1 : refernece to function
+    --> arg2 : one collection dt / Iterable
+
+it will ony 
