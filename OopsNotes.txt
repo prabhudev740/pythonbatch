@@ -686,3 +686,164 @@ Note: The class name should end with "Error", ex: TestError, NumberError
 Syntax:
 class NameOfError(Exception):
     pass
+
+
+File Handling
+------------
+File:
+------
+This a place or document where we can store some data.
+ Ex: .txt, .c, .py, .java, .html, .yaml
+
+The basic operations we can perform on a files 
+    1) Reading data from a file
+    2) Writing data to a file
+
+To perform any operation we have to take the permision from the file
+
+twe have to use an inbuilt Fuction "open()" to get accesibilty from the file.
+
+Syntax:
+    varName = open(arg1,arg2)
+        arg1 --> this will be a str, with fileName.extension, or the location of the file
+        arg2 --> the mode of the file
+
+Note: The opened file must be closed manually.
+    varName.close()
+
+
+File Handling
+-------------------
+the phenomenon of interacting with one independent file by being present in .py file
+
+Modes of a file
+-----------------
+-> write
+-> Read
+-> append
+
+
+1) write mode
+------------
+varname = open("testdir/temp.txt", 'w')
+
+This mode is used to write data in a file
+if the file is not present, controller will create a new file with the name give in that dir/ location
+if the file is present, preveously stored data will be removed/ override with new data.
+
+To write data in a file
+        varname.write(data)
+we can write only str data to a file
+The write method will take only one arg.
+After performing all operation we have to close it.
+
+    varname.close()
+
+    Ex :
+    fp = open("temp.txt", "w")
+    fp.write("MSys")
+    fp.close()
+
+
+read Mode
+------------
+ varname = open("temp.txt", "r")
+
+ using this mode we can read data from a file
+ the must be present in the dir or location
+ if the file is not present we will get error
+ if the is present we can read the using 3 methods
+    a) read()
+    b) readline()
+    c) readlines()
+
+a) read
+----------
+it will read entire file or data present in a file
+it will return one str
+
+Syntax:
+
+fp = open('file", "r")
+res = fp.read()
+fp.close()
+
+b) readline()
+-------------
+it will read the data line by line or one line at a line
+for one readline(), the controller will read only one line, the cursor will go to next.
+it will return str data
+
+Syntax:
+
+fp = open('file", "r")
+res1 = fp.readline()
+res2 = fp.readline()
+res3 = fp.readline()
+fp.close()
+
+readlines()
+------------
+it will read the data from a file and store them in a list, each line will be one element in that list
+
+Syntax:
+
+fp = open('file", "r")
+res = fp.readlines()
+fp.close()
+
+
+Append mode
+----------
+
+var = open("file path", "a")
+
+-> append mode will store the data after previous data in a file.
+-> if the file is not present then it will create a new file and write all data
+-> in case of wwrite mode if the file present preveously, it will override with new data,
+    but in append mode it will add data after the previous data
+
+-> to append new data we have to use write() method.
+
+Syntax:
+var.write(data)
+
+-> after appending we have close the file
+
+Ex:
+fp = open("file path", "a")
+fp.write(new data)
+fp.close()
+
+
+Note:
+To check the cursor position we can use one inbuilt function, tell()
+    var.tell()
+
+To place the cursor any given position, we have call seek()
+    var.seek(pos)
+
+
+
+print()
+---------
+print is the inbuilt function to display data in console
+
+to display we can pass one or muliple objects
+
+Syntax:
+    print(*objects, sep=" ", end="\n", file=sys.stdout, flush=False)
+
+    objects -> these are one or more values we want to display
+
+    sep -> it specifies the 'str' that should be used to separate the objects
+            defalut value is space (" ")
+
+    end -> it specifies the 'str' that should be printed after all of the objects have been printed.
+            The defalut value is new line cahe ("\n")
+
+    file -> It specifies the file like object where the output should be written.
+            The default value is 'sys.stdout', it means the output wil be written in termina or console
+
+    flush -> if the flush is True, it will store the output to the file object instantly.
+            defalut value is False

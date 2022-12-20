@@ -1,0 +1,6 @@
+name=MSys
+pin=600090
+city=chennai
+emp=1800
+ceo=Sanjay
+sal=50000
